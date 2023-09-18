@@ -18,3 +18,16 @@ adb push Hide-My-Applist-3.2.zip /sdcard
 adb push HMA-V3.2.apk /sdcard
 adb push Magisk.zip /data/local/tmp
 ```
+
+## MagiskOnEmulator
+```
+./patch.sh manager
+<continue setup on device>
+./patch.sh pull
+```
+
+## Android emulator
+AVD directory: `$ANDROID_SDK_ROOT/system-images/android-29/default/x86_64`
+Patching file: `ramdisk.img`
+
+Save original: `cp ramdisk.img origin_ramdisk.img`
