@@ -67,3 +67,9 @@ cp ~/Downloads/Magisk-v24.1.apk magisk.apk
 cp ramdisk.img $ANDROID_SDK_ROOT/system-images/android-29/default/x86_64/
 // Restart the AVD (cold start)
 ```
+4. Final setup
+```
+adb push ~/Downloads/LSPosed-v1.9.1-6990-zygisk-release.zip /sdcard
+// Install zygisk from magisk manager, under Modules
+adb install ~/Downloads/HMA-V3.2.apk
+```
