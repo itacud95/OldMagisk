@@ -46,3 +46,24 @@ One of the following:
 Hide-My-Applist-3.2.zip
 HMA-V3.2.apk
 ```
+Second setup: 
+1. Reset `ramdisk.img` to original
+```
+cd $ANDROID_SDK_ROOT/system-images/android-29/default/x86_64/
+cp original_ramdisk.img ramdisk.img
+```
+2. Prepare files
+```
+cd ~/dev/MagiskOnEmulator/
+cp $ANDROID_SDK_ROOT/system-images/android-29/default/x86_64/ramdisk.img .
+cp ~/Downloads/Magisk-v24.1.apk magisk.zip
+cp ~/Downloads/Magisk-v24.1.apk magisk.apk
+```
+3. Patch
+```
+./patch.sh manager
+// Open MagiskManger on AVD and click install - then select boot.img
+./patch.sh pull
+cp ramdisk.img $ANDROID_SDK_ROOT/system-images/android-29/default/x86_64/
+// Restart the AVD (cold start)
+```
