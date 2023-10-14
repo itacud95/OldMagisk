@@ -1,3 +1,14 @@
+# Setting up Magisk on emulator
+
+## Android studio
+1. Create new emulator API 29 without google APIs
+2. Under advanced settings enable cold boot
+3. Take backup of AVD file `$ANDROID_SDK_ROOT/system-images/android-29/default/x86_64/ramdisk.img`
+
+## Magisk
+1. Download latest Magisk from: https://github.com/topjohnwu/Magisk/releases
+2. 
+
 # Magisk
 
 https://github.com/shakalaca/MagiskOnEmulator

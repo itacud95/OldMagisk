@@ -1,0 +1,3 @@
+[submodule "MagiskOnEmulator"]
+	path = MagiskOnEmulator
+	url = https://github.com/shakalaca/MagiskOnEmulator
